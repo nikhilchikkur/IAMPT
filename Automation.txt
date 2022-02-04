@@ -1,0 +1,148 @@
+
+Closing all chrome instance -taskkill /F /IM chromedriver.exe
+Asserations
+
+WebElement chooseFile = driver.findElement(By.xpath("//input[@name='userfile']"));
+		Thread.sleep(5000);
+		chooseFile.sendKeys("C:\\Users\\nchikkur\\Downloads\\upload.jpg");
+		WebElement btn=driver.findElement(By.xpath("//input[@type='submit']"));
+		btn.click();
+		TakesScreenshot ts = (TakesScreenshot)driver;
+		File source = ts.getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(source, new File ("C:\\Users\\nchikkur\\Desktop\\selenium\\nik.png"));
+		
+image.io in login page
+getbelow element
+wait selenium
+reporter
+scroll into view
+
+
+
+driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		WebElement popup= driver.findElement(By.xpath("//input[@name='ctl00$btnCloseEmailEnrollment']"));
+		//fluentWait(popup);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		popup.click();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		WebElement member=driver.findElement(By.xpath("//li//a[text()='Membership'][1]"));
+		member.click();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		//details for membership
+		
+		WebElement enroll=driver.findElement(By.xpath("//strong//a[contains(text(),'ENROLL NOW')]"));
+		enroll.click();
+		WebElement check=driver.findElement(By.id("ctl00_mainContent_ctl00_keepex1"));
+		check.click();
+		WebElement check1=driver.findElement(By.id("ctl00_mainContent_ctl00_keepex2"));
+		check1.click();
+		WebElement check2=driver.findElement(By.id("ctl00_mainContent_ctl00_keepex3"));
+		check2.click();
+		WebElement classycheck=driver.findElement(By.id("ctl00_mainContent_ctl00_Classy1"));
+		classycheck.click();
+		WebElement classycheck1=driver.findElement(By.id("ctl00_mainContent_ctl00_Classy2"));
+		classycheck1.click();
+		WebElement classycheck2=driver.findElement(By.id("ctl00_mainContent_ctl00_Classy3"));
+		classycheck2.click();
+		WebElement respectcheck=driver.findElement(By.id("ctl00_mainContent_ctl00_Respectful1"));
+		respectcheck.click();
+		WebElement respectcheck1=driver.findElement(By.id("ctl00_mainContent_ctl00_Respectful2"));
+		respectcheck1.click();
+		WebElement respectcheck2=driver.findElement(By.id("ctl00_mainContent_ctl00_Respectful3"));
+		respectcheck2.click();
+		WebElement fname=driver.findElement(By.id("ctl00_mainContent_ctl00_txtFirstName"));
+		fname.sendKeys("nikhil");
+		WebElement lname=driver.findElement(By.id("ctl00_mainContent_ctl00_txtLastName"));
+		lname.sendKeys("C");
+		WebElement address=driver.findElement(By.id("ctl00_mainContent_ctl00_txtAddress1"));
+		address.sendKeys("C");
+		WebElement city=driver.findElement(By.id("ctl00_mainContent_ctl00_txtCity"));
+		city.sendKeys("Chicago");
+		WebElement code=driver.findElement(By.id("ctl00_mainContent_ctl00_txtZip"));
+		code.sendKeys("60601");
+		WebElement bday=driver.findElement(By.id("ctl00_mainContent_ctl00_dpBirthday"));
+		bday.sendKeys("10/02/1992");
+		WebElement email=driver.findElement(By.id("ctl00_mainContent_ctl00_txtEmail"));
+		email.sendKeys("Nchikkur@liventus.com");
+		WebElement email1=driver.findElement(By.id("ctl00_mainContent_ctl00_txtEmailVerify"));
+		email1.sendKeys("Nchikkur@liventus.com");
+		WebElement license=driver.findElement(By.id("ctl00_mainContent_ctl00_txtLicense"));
+		license.sendKeys("b3456");
+		WebElement nextbtn=driver.findElement(By.id("ctl00_mainContent_ctl00_btnSend"));
+		nextbtn.click();
+		
+		//upload DL
+		WebElement chooseFile = driver.findElement(By.id("ctl00_mainContent_ctl00_oFile"));
+		chooseFile.sendKeys("C:\\Users\\nchikkur\\Downloads\\upload.jpg");
+		WebElement interest=driver.findElement(By.id("txtInterestsAns"));
+		interest.sendKeys("The options and features given at this club are high standards compared to any in this state.");
+		WebElement pclub=driver.findElement(By.name("ctl00$mainContent$ctl00$txtSourceAns"));
+		pclub.sendKeys("The options and features given at this club are high standards compared to any in this state.");
+		WebElement mclub=driver.findElement(By.xpath("//textarea[@name='ctl00$mainContent$ctl00$txtMemberReason']"));
+		mclub.sendKeys("The options and features given at this club are high standards compared to any in this state.");
+		WebElement agree=driver.findElement(By.id("ctl00_mainContent_ctl00_chkagree"));
+		agree.click();
+		WebElement violation=driver.findElement(By.id("ctl00_mainContent_ctl00_chkviolations"));
+		violation.click();
+		WebElement nextbtn1=driver.findElement(By.id("ctl00$mainContent$ctl00$btnSend"));
+		nextbtn1.click();
+		
+		//billing information
+		WebElement firstname=driver.findElement(By.id("ctl00_mainContent_ctl00_txtFirstName"));
+		firstname.sendKeys("Nikhil");
+		WebElement lastname=driver.findElement(By.id("ctl00_mainContent_ctl00_txtLastName"));
+		lastname.sendKeys("Chikkur");
+		WebElement address1=driver.findElement(By.id("ctl00_mainContent_ctl00_txtAddress1"));
+		address1.sendKeys("home");
+		WebElement city1=driver.findElement(By.xpath("//input[@name='ctl00$mainContent$ctl00$txtCity']"));
+		city1.sendKeys("Chicago");
+		WebElement code1=driver.findElement(By.id("ctl00_mainContent_ctl00_txtZip"));
+		code1.sendKeys("60601");
+		
+		//Payment information
+		
+		WebElement MB=driver.findElement(By.id("ctl00_mainContent_ctl00_lblFees"));
+		Select objSelect = new Select(MB);
+		objSelect.selectByIndex(1);
+		WebElement MB1=driver.findElement(By.id("ctl00_mainContent_ctl00_ddlCreditCard"));
+		Select objSelect1 = new Select(MB1);
+		objSelect1.selectByIndex(3);
+		WebElement ccdetails=driver.findElement(By.id("ctl00_mainContent_ctl00_txtCardNumber"));
+		ccdetails.sendKeys("4111111111111111");
+		WebElement cvv=driver.findElement(By.id("ctl00_mainContent_ctl00_txtSecurityCode"));
+		cvv.sendKeys("123");
+		WebElement exp=driver.findElement(By.id("ctl00_mainContent_ctl00_ddlExpirationMonth"));
+		Select objSelect2 = new Select(exp);
+		objSelect2.selectByIndex(10);
+		WebElement ccm=driver.findElement(By.id("ctl00_mainContent_ctl00_ddlExpirationMonth"));
+		Select objSelect3 = new Select(ccm);
+		objSelect3.selectByIndex(23);
+		WebElement payment=driver.findElement(By.xpath("//div//button[text()='Ok']"));
+		payment.click();
+		
+		//proof for successful payment
+		TakesScreenshot ts = (TakesScreenshot)driver;
+		File source = ts.getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(source, new File ("C:\\Users\\nchikkur\\Desktop\\selenium\\payment.png"));
+		
+		//member approval
+		WebElement staff= driver.findElement(By.linkText("Staff"));
+		staff.click();
+		WebElement Uname= driver.findElement(By.name("ctl00$mainContent$login1$LoginCtrl$UserName"));
+		Uname.sendKeys("astrilets@sottrelhg.com");
+		WebElement pwd= driver.findElement(By.name("ctl00$mainContent$login1$LoginCtrl$Password"));
+		pwd.sendKeys("1234");
+		WebElement lgnbtn=driver.findElement(By.id("ctl00_mainContent_login1_LoginCtrl_Login"));
+		lgnbtn.click();
+		WebElement ma= driver.findElement(By.xpath("//p//a[text()='Member Applications']"));
+		ma.click();
+		
+		
+		
+		
+		//fluentWait(member);
+		//WebElement location=driver.findElement(By.xpath("//li//a[text()='Locations'][1]"));
+		//location.click();
+		
+		//*[@id="MemberList"]/tbody/tr[2]/td[2]/div
